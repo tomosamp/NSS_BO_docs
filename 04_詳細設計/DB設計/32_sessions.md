@@ -16,9 +16,9 @@
 | No | カラム名 | 論理名 | 型 | PK | Not Null | デフォルト | 説明/業務ルール | 備考 |
 |---|---|---|---|---|---|---|---|---|
 | 1 | id | セッションID | VARCHAR(255) | ○ | ○ |  | セッショントークン。 | 主キー |
-| 2 | user_id | ユーザーID | BIGINT UNSIGNED |  |  |  | ログイン会員のID。 | `users.id`参照（FKなし） |
+| 2 | user_id | 顧客ID | BIGINT UNSIGNED |  |  |  | ログイン顧客のID。 | `users.id`参照（FKなし） |
 | 3 | ip_address | IPアドレス | VARCHAR(45) |  |  |  | IPv6対応。 |  |
-| 4 | user_agent | ユーザーエージェント | TEXT |  |  |  | ブラウザ情報。 |  |
+| 4 | user_agent | User-Agent | TEXT |  |  |  | ブラウザ情報。 |  |
 | 5 | payload | セッションデータ | LONGTEXT |  | ○ |  | シリアライズ済みデータ。 |  |
 | 6 | last_activity | 最終アクティビティ | INT |  | ○ |  | UNIXタイムスタンプ（秒）。 | インデックスあり |
 
@@ -26,7 +26,7 @@
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |
 |---|---|---|---|---|---|
 | 主キー | PRIMARY | id | ○ | セッション一意性 |  |
-| セカンダリ | sessions_user_id_index | user_id | × | ユーザーのセッション確認 |  |
+| セカンダリ | sessions_user_id_index | user_id | × | 顧客のセッション確認 |  |
 | セカンダリ | sessions_last_activity_index | last_activity | × | 期限切れ削除ジョブ |  |
 
 ## 4. 制約・リレーション

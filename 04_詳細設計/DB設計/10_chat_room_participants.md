@@ -17,7 +17,7 @@
 |---|---|---|---|---|---|---|---|---|
 | 1 | id | 参加者ID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | chat_room_id | チャットルームID | BIGINT UNSIGNED |  | ○ |  | `chat_rooms.id`参照。 | ON DELETE CASCADE |
-| 3 | participant_id | 参加者ID（実体） | BIGINT UNSIGNED |  | ○ |  | ユーザー/運営者等のID。 |  |
+| 3 | participant_id | 参加主体ID | BIGINT UNSIGNED |  | ○ |  | 顧客/運営者等のID。 |  |
 | 4 | participant_type | 参加者種別 | VARCHAR(50) |  | ○ |  | 例: `users`, `operators`。 |  |
 | 5 | role | 参加ロール | TINYINT UNSIGNED |  | ○ | 1 | 1=顧客、2=運営等。 | デフォルト顧客 |
 | 6 | created_at | 参加日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |

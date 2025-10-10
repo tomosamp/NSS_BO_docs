@@ -18,7 +18,7 @@
 | 1 | id | 添付ID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | chat_message_id | メッセージID | BIGINT UNSIGNED |  | ○ |  | `chat_messages.id`参照。 | ON DELETE CASCADE |
 | 3 | file_name | 保存ファイル名 | VARCHAR(255) |  | ○ |  | ストレージ上のファイル名。 |  |
-| 4 | original_name | 元ファイル名 | VARCHAR(255) |  | ○ |  | ユーザーアップロード名。 |  |
+| 4 | original_name | 元ファイル名 | VARCHAR(255) |  | ○ |  | アップロード時の元ファイル名。 |  |
 | 5 | file_path | 物理パス | VARCHAR(255) |  |  |  | 従来ローカル保存時のパス。S3移行でnull許容。 | 2025-07-29よりNULL可 |
 | 6 | s3_key | S3キー | VARCHAR(500) |  |  |  | S3保管時のキー。 |  |
 | 7 | access_token | ダウンロードトークン | VARCHAR(100) |  |  |  | 有効期限付きアクセス制御。 |  |

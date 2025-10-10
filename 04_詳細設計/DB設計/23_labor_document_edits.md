@@ -18,7 +18,7 @@
 | 1 | id | 編集履歴ID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | original_document_id | 元文書ID | BIGINT UNSIGNED |  | ○ |  | `labor_documents.id`参照。 | ON DELETE CASCADE |
 | 3 | edited_document_id | 編集後文書ID | BIGINT UNSIGNED |  | ○ |  | `labor_documents.id`参照。 | ON DELETE CASCADE |
-| 4 | edited_by | 編集者ユーザーID | BIGINT UNSIGNED |  | ○ |  | `users.id`参照。 | ON DELETE CASCADE |
+| 4 | edited_by | 編集者顧客ID | BIGINT UNSIGNED |  | ○ |  | `users.id`参照。 | ON DELETE CASCADE |
 | 5 | created_at | 編集日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 編集日時。 |  |
 | 6 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
@@ -28,7 +28,7 @@
 | 主キー | PRIMARY | id | ○ | レコード一意性 |  |
 | 外部キー | labor_document_edits_original_document_id_foreign | original_document_id | ○ | 元文書削除時連鎖削除 |  |
 | 外部キー | labor_document_edits_edited_document_id_foreign | edited_document_id | ○ | 編集後文書削除時連鎖削除 |  |
-| 外部キー | labor_document_edits_edited_by_foreign | edited_by | ○ | ユーザー削除時連鎖削除 |  |
+| 外部キー | labor_document_edits_edited_by_foreign | edited_by | ○ | 顧客削除時連鎖削除 |  |
 | セカンダリ | labor_document_edits_original_document_id_index | original_document_id | × | 元文書別履歴取得 |  |
 | セカンダリ | labor_document_edits_edited_document_id_index | edited_document_id | × | 新文書から逆引き |  |
 | セカンダリ | labor_document_edits_edited_by_index | edited_by | × | 編集者別履歴 |  |

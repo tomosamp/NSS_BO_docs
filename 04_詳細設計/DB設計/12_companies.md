@@ -41,7 +41,7 @@
 | 種別 | 名称 | 内容 | 備考 |
 |---|---|---|---|
 | 外部キー | companies_prefecture_id_foreign | `prefectures.id`参照、ON DELETE CASCADE |  |
-| リレーション | Company→Users/Operators等 | 1:N。ユーザー・案件と紐付く基本マスタ |  |
+| リレーション | Company→Customers/Operators等 | 1:N。顧客・案件と紐付く基本マスタ |  |
 | 運用ルール | 論理削除 | `deleted_at`で非表示。完全削除は業務要件協議。 |  |
 
 ## 改定履歴

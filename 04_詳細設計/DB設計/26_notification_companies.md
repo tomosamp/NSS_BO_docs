@@ -19,7 +19,7 @@
 | 2 | notification_id | お知らせID | BIGINT UNSIGNED |  | ○ |  | `notifications.id`参照。 | ON DELETE CASCADE |
 | 3 | company_id | 企業ID | BIGINT UNSIGNED |  | ○ |  | `companies.id`参照。 | ON DELETE CASCADE |
 | 4 | read_time | 既読日時 | TIMESTAMP(0) |  |  |  | 既読時刻。未読はNULL。 |  |
-| 5 | read_user_id | 既読ユーザーID | BIGINT UNSIGNED |  |  |  | 既読操作をした`users.id`。 | ON DELETE SET NULL |
+| 5 | read_user_id | 既読顧客ID | BIGINT UNSIGNED |  |  |  | 既読操作をした顧客（`users.id`）。 | ON DELETE SET NULL |
 | 6 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 配信登録日時。 |  |
 | 7 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 | 8 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
@@ -31,7 +31,7 @@
 | ユニーク | uk_notification_companies_notification_company | notification_id, company_id | ○ | 同一お知らせの重複配信防止 |  |
 | 外部キー | notification_companies_notification_id_foreign | notification_id | ○ | お知らせ削除時の連鎖削除 |  |
 | 外部キー | notification_companies_company_id_foreign | company_id | ○ | 企業削除時の連鎖削除 |  |
-| 外部キー | notification_companies_read_user_id_foreign | read_user_id | × | ユーザー削除時にNULL化 |  |
+| 外部キー | notification_companies_read_user_id_foreign | read_user_id | × | 顧客削除時にNULL化 |  |
 | セカンダリ | idx_notification_companies_notification_id | notification_id | × | お知らせ単位の配信先取得 |  |
 | セカンダリ | idx_notification_companies_company_id | company_id | × | 企業別通知履歴 |  |
 | セカンダリ | idx_notification_companies_read_time | read_time | × | 既読管理・集計 |  |
@@ -41,7 +41,7 @@
 |---|---|---|---|
 | 外部キー | notification_id FK | `notifications.id`参照、ON DELETE CASCADE |  |
 | 外部キー | company_id FK | `companies.id`参照、ON DELETE CASCADE |  |
-| 外部キー | read_user_id FK | `users.id`参照、ON DELETE SET NULL |  |
+| 外部キー | read_user_id FK | `users.id`参照（顧客）、ON DELETE SET NULL |  |
 | リレーション | Notification→NotificationCompanies | 1:N、配信先単位管理 |  |
 | リレーション | Company→NotificationCompanies | 1:N、企業別通知履歴 |  |
 | 運用ルール | 既読判定 | `read_time`と`read_user_id`の双方で既読者・時刻を管理。 |  |

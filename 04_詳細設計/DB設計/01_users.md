@@ -8,8 +8,8 @@
 | 項目 | 内容 | 備考 |
 |---|---|---|
 | テーブル物理名 | users |  |
-| テーブル論理名 | 利用ユーザー |  |
-| ドメイン/コンテキスト | Users（会員管理） |  |
+| テーブル論理名 | 顧客 |  |
+| ドメイン/コンテキスト | Customers（顧客管理） |  |
 | 主キー | id（BIGINT UNSIGNED AUTO_INCREMENT） |  |
 
 ## 2. カラム定義
@@ -23,8 +23,8 @@
 | 6 | first_name | 名 | VARCHAR(50) |  | ○ |  | 氏名（漢字）。 |  |
 | 7 | last_name_kana | セイ | VARCHAR(50) |  | ○ |  | 全角カタカナ想定。 |  |
 | 8 | first_name_kana | メイ | VARCHAR(50) |  | ○ |  | 全角カタカナ想定。 |  |
-| 9 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準タイムスタンプ。 |  |
-| 10 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 更新トリガーで自動更新。 | on update 現地DB依存 |
+| 9 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準タイムスタンプ。 |  |
+| 10 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 更新トリガーで自動更新。 | on update 現地DB依存 |
 | 11 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。論理削除管理。 |  |
 
 ## 3. インデックス・キー設計
@@ -38,8 +38,8 @@
 | 種別 | 名称 | 内容 | 備考 |
 |---|---|---|---|
 | 外部キー | users_company_id_foreign | `companies.id`へ参照、ON DELETE CASCADE |  |
-| リレーション | Company-User | 企業 : ユーザー = 1 : N | アプリケーション側Eloquent想定 |
-| リレーション | User-Task/Labor等 | 他テーブルからのFKあり（application_requests等） | 詳細は各テーブル参照 |
+| リレーション | Company-Customer | 企業 : 顧客 = 1 : N | アプリケーション側Eloquent想定 |
+| リレーション | Customer-Task/Labor等 | 他テーブルからのFKあり（application_requests等） | 詳細は各テーブル参照 |
 
 ## 改定履歴
 | 改定日 | 版数 | 変更概要 | 担当 |

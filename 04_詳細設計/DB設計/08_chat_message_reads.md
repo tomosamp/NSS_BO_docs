@@ -17,8 +17,8 @@
 |---|---|---|---|---|---|---|---|---|
 | 1 | id | 既読ID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | chat_message_id | メッセージID | BIGINT UNSIGNED |  | ○ |  | `chat_messages.id`参照。 | ON DELETE CASCADE |
-| 3 | user_id | 参照者ID | BIGINT UNSIGNED |  | ○ |  | 既読ユーザーのID。 | polymorphic |
-| 4 | user_type | 参照者種別 | VARCHAR(50) |  | ○ |  | ユーザー種別識別子。 |  |
+| 3 | user_id | 参照主体ID | BIGINT UNSIGNED |  | ○ |  | 既読主体（顧客/運営者等）のID。 | polymorphic |
+| 4 | user_type | 参照主体種別 | VARCHAR(50) |  | ○ |  | 主体種別識別子（例: users=顧客）。 |  |
 | 5 | read_at | 既読日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 既読記録時点。 |  |
 | 6 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
 | 7 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
@@ -29,7 +29,7 @@
 | 主キー | PRIMARY | id | ○ | レコード一意性 |  |
 | 外部キー | chat_message_reads_chat_message_id_foreign | chat_message_id | ○ | メッセージ削除時に連鎖削除 |  |
 | ユニーク | uk_chat_message_reads_unique | chat_message_id, user_id, user_type | ○ | 同一メッセージでの二重既読防止 | start_position不要に調整済 |
-| セカンダリ | cmr_user_read_idx | user_id, user_type, read_at | × | ユーザー別未読/既読確認 |  |
+| セカンダリ | cmr_user_read_idx | user_id, user_type, read_at | × | 主体別未読/既読確認 |  |
 | セカンダリ | cmr_message_read_idx | chat_message_id, read_at | × | メッセージの既読一覧 |  |
 | セカンダリ | cmr_read_at_idx | read_at | × | 時間帯別集計 |  |
 
@@ -38,7 +38,7 @@
 |---|---|---|---|
 | 外部キー | chat_message_reads_chat_message_id_foreign | `chat_messages.id`参照、ON DELETE CASCADE |  |
 | リレーション | ChatMessage→ChatMessageReads | 1:N、メッセージ毎の既読状況 |  |
-| 業務ルール | 多態ユーザー | `user_type`でユーザー種別を識別。参照先の整合性はアプリ側で担保。 |  |
+| 業務ルール | 多態主体 | `user_type`で主体種別を識別。参照先の整合性はアプリ側で担保。 |  |
 
 ## 改定履歴
 | 改定日 | 版数 | 変更概要 | 担当 |

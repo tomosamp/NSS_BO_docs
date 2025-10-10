@@ -18,7 +18,7 @@
 | 1 | id | ファイルID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | funding_id | 助成金ID | BIGINT UNSIGNED |  | ○ |  | `fundings.id`参照。 | ON DELETE CASCADE |
 | 3 | file_name | 保存ファイル名 | VARCHAR(255) |  | ○ |  | ストレージ管理名。 |  |
-| 4 | original_name | 元ファイル名 | VARCHAR(255) |  | ○ |  | ユーザーアップロード名。 |  |
+| 4 | original_name | 元ファイル名 | VARCHAR(255) |  | ○ |  | アップロード時の元ファイル名。 |  |
 | 5 | file_path | ファイルパス | VARCHAR(500) |  | ○ |  | ストレージ上のパス。 |  |
 | 6 | file_type | 種別 | VARCHAR(50) |  |  |  | 書類種別（PDFなど）。 |  |
 | 7 | mime_type | MIMEタイプ | VARCHAR(100) |  |  |  | Content-Type。 |  |

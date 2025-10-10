@@ -17,8 +17,8 @@
 |---|---|---|---|---|---|---|---|---|
 | 1 | id | メンションID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | message_id | メッセージID | BIGINT UNSIGNED |  | ○ |  | `chat_messages.id`参照。 | ON DELETE CASCADE |
-| 3 | mentioned_user_id | 参照ユーザーID | BIGINT UNSIGNED |  | ○ |  | メンション対象のID。 | polymorphic |
-| 4 | mentioned_user_type | 参照ユーザー種別 | VARCHAR(50) |  | ○ |  | ユーザー種別（例: users/operators）。 |  |
+| 3 | mentioned_user_id | 参照対象ID | BIGINT UNSIGNED |  | ○ |  | メンション対象（顧客/運営者等）のID。 | polymorphic |
+| 4 | mentioned_user_type | 参照対象種別 | VARCHAR(50) |  | ○ |  | 対象種別（例: users=顧客, operators=運営者）。 |  |
 | 5 | start_position | 開始位置 | INT |  | ○ |  | メンション開始文字位置（0基点）。 |  |
 | 6 | end_position | 終了位置 | INT |  | ○ |  | メンション終了位置。 |  |
 | 7 | mention_text | 表示テキスト | VARCHAR(255) |  | ○ |  | 表示用の@文字列等。 |  |
@@ -31,7 +31,7 @@
 | 主キー | PRIMARY | id | ○ | レコード一意性 |  |
 | 外部キー | chat_message_mentions_message_id_foreign | message_id | ○ | メッセージ削除時の連鎖削除 |  |
 | セカンダリ | cmm_message_id_idx | message_id | × | メッセージ別メンション取得 |  |
-| セカンダリ | cmm_user_type_idx | mentioned_user_id, mentioned_user_type | × | ユーザーへの通知抽出 |  |
+| セカンダリ | cmm_user_type_idx | mentioned_user_id, mentioned_user_type | × | 対象主体への通知抽出 |  |
 | セカンダリ | cmm_created_at_idx | created_at | × | 作成日時順検索 |  |
 | ユニーク | cmm_unique_mention | message_id, mentioned_user_id, mentioned_user_type, start_position | ○ | 同一メッセージ内の重複排除 |  |
 
