@@ -25,8 +25,8 @@
 | 8 | contact_email | 連絡先メール | VARCHAR(255) |  |  |  | 問い合わせメール。 |  |
 | 9 | contact_phone | 連絡先電話番号 | VARCHAR(50) |  |  |  | 代表電話。 |  |
 |10 | is_active | 有効フラグ | BOOLEAN |  | ○ | true | 連携中 = true。 | インデックスあり |
-|11 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 登録日時。 |  |
-|12 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+|11 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 登録日時。 |  |
+|12 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

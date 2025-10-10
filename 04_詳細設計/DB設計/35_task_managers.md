@@ -19,8 +19,8 @@
 | 2 | task_id | タスクID | BIGINT UNSIGNED |  | ○ |  | `tasks.id`参照。 | ON DELETE CASCADE |
 | 3 | status | 担当区分 | TINYINT |  | ○ |  | 1=主担当、2=サブ担当。 |  |
 | 4 | manager_id | 担当者ID | BIGINT UNSIGNED |  | ○ |  | `operators.id`参照。 | ON DELETE CASCADE |
-| 5 | created_at | 登録日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 割り当て日時。 |  |
-| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 5 | created_at | 登録日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 割り当て日時。 |  |
+| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 | 7 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

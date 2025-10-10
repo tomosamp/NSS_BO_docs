@@ -19,9 +19,9 @@
 | 2 | chat_message_id | メッセージID | BIGINT UNSIGNED |  | ○ |  | `chat_messages.id`参照。 | ON DELETE CASCADE |
 | 3 | user_id | 参照主体ID | BIGINT UNSIGNED |  | ○ |  | 既読主体（顧客/運営者等）のID。 | polymorphic |
 | 4 | user_type | 参照主体種別 | VARCHAR(50) |  | ○ |  | 主体種別識別子（例: users=顧客）。 |  |
-| 5 | read_at | 既読日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 既読記録時点。 |  |
-| 6 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 5 | read_at | 既読日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 既読記録時点。 |  |
+| 6 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

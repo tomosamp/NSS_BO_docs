@@ -27,8 +27,8 @@
 |10 | description | 説明 | TEXT |  |  |  | ファイル説明文。 |  |
 |11 | sort_order | 表示順 | INT |  | ○ | 0 | 一覧表示順。小さいほど先頭。 |  |
 |12 | is_public | 公開フラグ | BOOLEAN |  | ○ | true | 一般公開可否。 |  |
-|13 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-|14 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+|13 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+|14 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 |15 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

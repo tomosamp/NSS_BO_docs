@@ -23,8 +23,8 @@
 | 6 | limit_date | 期限日 | DATE |  |  |  | 期限未設定時はNULL。 |  |
 | 7 | taskable_id | 関連ID | BIGINT UNSIGNED |  | ○ |  | ポリモーフィック先のID。 |  |
 | 8 | taskable_type | 関連タイプ | VARCHAR(255) |  | ○ |  | ポリモーフィック先クラス。 |  |
-| 9 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 登録日時。 |  |
-|10 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 9 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 登録日時。 |  |
+|10 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 |11 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

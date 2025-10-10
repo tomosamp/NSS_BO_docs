@@ -17,8 +17,8 @@
 |---|---|---|---|---|---|---|---|---|
 | 1 | id | 都道府県ID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | name | 都道府県名 | VARCHAR(100) |  | ○ |  | 表示名。 |  |
-| 3 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 4 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 3 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 4 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

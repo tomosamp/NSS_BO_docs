@@ -19,8 +19,8 @@
 | 2 | company_id | 企業ID | BIGINT UNSIGNED |  | ○ |  | 対応対象の企業。 | FK未設定（将来設定検討） |
 | 3 | operator_id | オペレーターID | BIGINT UNSIGNED |  | ○ |  | 対応した運営者。 | FK未設定 |
 | 4 | content | 対応内容 | TEXT |  | ○ |  | 実施内容の記録。 |  |
-| 5 | created_at | 記録日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 登録日時。 |  |
-| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 編集時更新。 |  |
+| 5 | created_at | 記録日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 登録日時。 |  |
+| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 編集時更新。 |  |
 | 7 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`による論理削除。 |  |
 
 ## 3. インデックス・キー設計

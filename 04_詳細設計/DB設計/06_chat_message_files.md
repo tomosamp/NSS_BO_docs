@@ -26,8 +26,8 @@
 | 9 | file_type | 種別 | VARCHAR(50) |  |  |  | アプリ分類（画像/文書等）。 |  |
 |10 | mime_type | MIMEタイプ | VARCHAR(100) |  | ○ |  | Content-Type。 |  |
 |11 | file_size | ファイルサイズ | BIGINT |  | ○ |  | バイト単位。 |  |
-|12 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-|13 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+|12 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+|13 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 |14 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`利用。 |  |
 
 ## 3. インデックス・キー設計

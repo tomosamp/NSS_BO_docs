@@ -18,8 +18,8 @@
 | 1 | id | お知らせID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | title | タイトル | VARCHAR(100) |  | ○ |  | 表示タイトル。 |  |
 | 3 | content | 本文 | TEXT |  | ○ |  | HTML/Markdown等で保存。 |  |
-| 4 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 公開登録日時。 |  |
-| 5 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 更新日時。 | on update CURRENT_TIMESTAMP |
+| 4 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 公開登録日時。 |  |
+| 5 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 更新日時。 | on update CURRENT_TIMESTAMP |
 | 6 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `deleted_at`で非表示管理。 |  |
 
 ## 3. インデックス・キー設計

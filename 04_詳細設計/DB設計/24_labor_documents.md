@@ -31,8 +31,8 @@
 |14 | generated_at | 生成日時 | TIMESTAMP(0) |  |  |  | ファイル生成完了時刻。 |  |
 |15 | created_by_type | 作成者種別 | VARCHAR(255) |  |  |  | `users`/`operators` 等。 |  |
 |16 | created_by_id | 作成者ID | BIGINT UNSIGNED |  |  |  | 作成者のID。 |  |
-|17 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-|18 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+|17 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+|18 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 |19 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

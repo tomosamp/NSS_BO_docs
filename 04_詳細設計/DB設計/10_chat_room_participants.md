@@ -20,8 +20,8 @@
 | 3 | participant_id | 参加主体ID | BIGINT UNSIGNED |  | ○ |  | 顧客/運営者等のID。 |  |
 | 4 | participant_type | 参加者種別 | VARCHAR(50) |  | ○ |  | 例: `users`, `operators`。 |  |
 | 5 | role | 参加ロール | TINYINT UNSIGNED |  | ○ | 1 | 1=顧客、2=運営等。 | デフォルト顧客 |
-| 6 | created_at | 参加日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 6 | created_at | 参加日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 | 8 | deleted_at | 退室日時 | TIMESTAMP(0) |  |  |  | 論理削除で退室扱い。 |  |
 
 ## 3. インデックス・キー設計

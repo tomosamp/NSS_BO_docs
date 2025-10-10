@@ -22,8 +22,8 @@
 | 5 | break_end_hour | 終了時（時間） | TINYINT UNSIGNED |  | ○ |  | 0–23。 |  |
 | 6 | break_end_minute | 終了時（分） | TINYINT UNSIGNED |  | ○ |  | 0–59。 |  |
 | 7 | display_order | 表示順 | TINYINT UNSIGNED |  | ○ | 1 | 同一就業規則内での表示順。 | 初期値1 |
-| 8 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 9 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 8 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 9 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

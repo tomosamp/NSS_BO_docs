@@ -20,8 +20,8 @@
 | 3 | company_id | 企業ID | BIGINT UNSIGNED |  | ○ |  | `companies.id`参照。 | ON DELETE CASCADE |
 | 4 | read_time | 既読日時 | TIMESTAMP(0) |  |  |  | 既読時刻。未読はNULL。 |  |
 | 5 | read_user_id | 既読顧客ID | BIGINT UNSIGNED |  |  |  | 既読操作をした顧客（`users.id`）。 | ON DELETE SET NULL |
-| 6 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 配信登録日時。 |  |
-| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 6 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 配信登録日時。 |  |
+| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 | 8 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

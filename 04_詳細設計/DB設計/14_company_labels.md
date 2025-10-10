@@ -18,8 +18,8 @@
 | 1 | id | 連番ID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | 技術的PK。 |  |
 | 2 | company_id | 企業ID | BIGINT UNSIGNED |  | ○ |  | `companies.id`参照。 | ON DELETE CASCADE |
 | 3 | label_id | ラベルID | BIGINT UNSIGNED |  | ○ |  | `labels.id`参照。 | ON DELETE CASCADE |
-| 4 | created_at | 登録日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 5 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 4 | created_at | 登録日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 5 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
 | 6 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

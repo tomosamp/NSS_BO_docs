@@ -19,8 +19,8 @@
 | 2 | original_document_id | 元文書ID | BIGINT UNSIGNED |  | ○ |  | `labor_documents.id`参照。 | ON DELETE CASCADE |
 | 3 | edited_document_id | 編集後文書ID | BIGINT UNSIGNED |  | ○ |  | `labor_documents.id`参照。 | ON DELETE CASCADE |
 | 4 | edited_by | 編集者顧客ID | BIGINT UNSIGNED |  | ○ |  | `users.id`参照。 | ON DELETE CASCADE |
-| 5 | created_at | 編集日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 編集日時。 |  |
-| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 5 | created_at | 編集日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 編集日時。 |  |
+| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

@@ -20,9 +20,9 @@
 | 3 | company_id | 企業ID | BIGINT UNSIGNED |  | ○ |  | `companies.id`参照。顧客所属企業。 | ON DELETE CASCADE |
 | 4 | funding_id | 助成金ID | BIGINT UNSIGNED |  | ○ |  | `fundings.id`参照。対象助成金。 | ON DELETE CASCADE |
 | 5 | firm_id | 社労士法人ID | BIGINT UNSIGNED |  | ○ |  | `social_insurance_firms.id`参照。担当社労士法人。 | ON DELETE CASCADE |
-| 6 | request_date | 依頼日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 依頼受付日時。タイムゾーンはDB依存。 |  |
-| 7 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 8 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 6 | request_date | 依頼日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 依頼受付日時。タイムゾーンはDB依存。 |  |
+| 7 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 8 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

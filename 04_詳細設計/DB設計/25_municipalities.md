@@ -20,8 +20,8 @@
 | 3 | name | 市区町村名 | VARCHAR(100) |  | ○ |  | 表示名。 |  |
 | 4 | code | 市区町村コード | CHAR(6) |  |  |  | 全国地方公共団体コード等。 |  |
 | 5 | kana | 市区町村名（カナ） | VARCHAR(100) |  |  |  | 読み仮名。 |  |
-| 6 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 6 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

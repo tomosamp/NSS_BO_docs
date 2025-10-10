@@ -18,8 +18,8 @@
 | 1 | id | ルームID | BIGINT UNSIGNED | ○ | ○ | AUTO INCREMENT | システム採番。 |  |
 | 2 | company_id | 企業ID | BIGINT UNSIGNED |  | ○ |  | `companies.id`参照。 | ON DELETE CASCADE |
 | 3 | name | ルーム名 | VARCHAR(255) |  | ○ |  | 表示名。 |  |
-| 4 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | ルーム作成日時。 |  |
-| 5 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 最終更新日時。 | on update CURRENT_TIMESTAMP |
+| 4 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | ルーム作成日時。 |  |
+| 5 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 最終更新日時。 | on update CURRENT_TIMESTAMP |
 | 6 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`による退避。 |  |
 
 ## 3. インデックス・キー設計

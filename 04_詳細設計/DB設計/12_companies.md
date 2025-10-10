@@ -27,8 +27,8 @@
 |10 | prefecture_id | 都道府県ID | BIGINT UNSIGNED |  | ○ |  | `prefectures.id`参照。 |  |
 |11 | city | 市区町村 | VARCHAR(100) |  | ○ |  | 市区町村名。 |  |
 |12 | address_line_1 | 市区町村以降 | VARCHAR(100) |  | ○ |  | 以降の住所。 |  |
-|13 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 登録日時。 |  |
-|14 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 更新日時。 | on update CURRENT_TIMESTAMP |
+|13 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 登録日時。 |  |
+|14 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 更新日時。 | on update CURRENT_TIMESTAMP |
 |15 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`による論理削除。 |  |
 
 ## 3. インデックス・キー設計

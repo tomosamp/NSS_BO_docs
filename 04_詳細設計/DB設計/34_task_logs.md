@@ -19,8 +19,8 @@
 | 2 | task_id | タスクID | BIGINT UNSIGNED |  | ○ |  | `tasks.id`参照。 | ON DELETE CASCADE |
 | 3 | operator_id | 記録者ID | BIGINT UNSIGNED |  | ○ |  | `operators.id`参照。 | ON DELETE CASCADE |
 | 4 | content | ログ内容 | TEXT |  | ○ |  | コメント・進捗内容。 |  |
-| 5 | created_at | 登録日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 投稿時刻。 |  |
-| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 5 | created_at | 登録日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 投稿時刻。 |  |
+| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 | 7 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

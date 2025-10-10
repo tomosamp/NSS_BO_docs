@@ -23,8 +23,8 @@
 | 6 | last_name_kana | セイ | VARCHAR(50) |  |  |  | 全角カナ。 |  |
 | 7 | first_name_kana | メイ | VARCHAR(50) |  |  |  | 全角カナ。 |  |
 | 8 | role | 権限 | TINYINT |  | ○ |  | 権限区分（1:管理者等）。 | 値定義は別表 |
-| 9 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | アカウント作成日時。 |  |
-|10 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 9 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | アカウント作成日時。 |  |
+|10 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 |11 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `deleted_at`で退職/停止管理。 |  |
 
 ## 3. インデックス・キー設計

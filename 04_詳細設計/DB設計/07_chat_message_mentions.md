@@ -22,8 +22,8 @@
 | 5 | start_position | 開始位置 | INT |  | ○ |  | メンション開始文字位置（0基点）。 |  |
 | 6 | end_position | 終了位置 | INT |  | ○ |  | メンション終了位置。 |  |
 | 7 | mention_text | 表示テキスト | VARCHAR(255) |  | ○ |  | 表示用の@文字列等。 |  |
-| 8 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-| 9 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 8 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+| 9 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

@@ -84,8 +84,8 @@
 |66 | bonus_winter_end_month | 冬季賞与終了月 | TINYINT UNSIGNED |  |  |  | 1–12。 | CHECK有 |
 |67 | bonus_winter_end_day | 冬季賞与終了日 | TINYINT UNSIGNED |  |  |  | 1–31。 | CHECK有 |
 |68 | registration_status | 登録ステータス | ENUM('draft','completed') |  | ○ | 'draft' | 入力完了状態の管理。 |  |
-|69 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-|70 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+|69 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+|70 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 
 ## 3. インデックス・キー設計
 | 種別 | 名称 | 対象カラム | ユニーク | 用途/目的 | 備考 |

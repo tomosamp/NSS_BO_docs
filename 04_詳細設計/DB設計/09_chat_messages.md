@@ -20,8 +20,8 @@
 | 3 | sender_id | 送信者ID | BIGINT UNSIGNED |  | ○ |  | 送信主体のID。 | 多態 |
 | 4 | sender_type | 送信者種別 | VARCHAR(50) |  | ○ |  | 例: `users`, `operators`。 |  |
 | 5 | content | メッセージ本文 | TEXT |  |  |  | リッチテキスト。添付のみの場合null可。 |  |
-| 6 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 送信日時。 |  |
-| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 編集時に更新。 | on update CURRENT_TIMESTAMP |
+| 6 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 送信日時。 |  |
+| 7 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 編集時に更新。 | on update CURRENT_TIMESTAMP |
 | 8 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`による削除フラグ。 |  |
 
 ## 3. インデックス・キー設計

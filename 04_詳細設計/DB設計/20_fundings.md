@@ -39,8 +39,8 @@
 |21 | public_end_date | 公募終了日 | DATE |  |  |  | 公募終了予定日。 |  |
 |22 | last_updated | 最終更新日 | DATE |  |  |  | データ更新日。 |  |
 |23 | is_priority_display | 優先表示フラグ | BOOLEAN |  | ○ | false | トップ掲載等の優先表示。 | インデックス有 |
-|24 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 |  |
-|25 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+|24 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 |  |
+|25 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 |26 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

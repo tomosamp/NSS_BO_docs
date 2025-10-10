@@ -19,8 +19,8 @@
 | 2 | company_id | 企業ID | BIGINT UNSIGNED |  | ○ |  | `companies.id`参照。 | ON DELETE CASCADE |
 | 3 | status | アサインステータス | VARCHAR(100) |  | ○ |  | 担当状況。 | 値一覧は運用定義 |
 | 4 | operator_id | 運営者ID | BIGINT UNSIGNED |  | ○ |  | `operators.id`参照。 | ON DELETE CASCADE |
-| 5 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 登録時刻。 |  |
-| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 更新時刻。 | on update CURRENT_TIMESTAMP |
+| 5 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 登録時刻。 |  |
+| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 更新時刻。 | on update CURRENT_TIMESTAMP |
 | 7 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計

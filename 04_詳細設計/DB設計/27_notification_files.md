@@ -19,8 +19,8 @@
 | 2 | notification_id | お知らせID | BIGINT UNSIGNED |  | ○ |  | `notifications.id`参照。 | ON DELETE CASCADE |
 | 3 | name | ファイル名 | VARCHAR(100) |  | ○ |  | 表示名。 |  |
 | 4 | url | ファイルURL | VARCHAR(255) |  | ○ |  | 外部/内部ストレージURL。 |  |
-| 5 | created_at | 作成日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | 登録時刻。 |  |
-| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  | ○ | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
+| 5 | created_at | 作成日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | 登録時刻。 |  |
+| 6 | updated_at | 更新日時 | TIMESTAMP(0) |  |  | CURRENT_TIMESTAMP | Laravel標準。 | on update CURRENT_TIMESTAMP |
 | 7 | deleted_at | 論理削除日時 | TIMESTAMP(0) |  |  |  | `softDeletes()`。 |  |
 
 ## 3. インデックス・キー設計
