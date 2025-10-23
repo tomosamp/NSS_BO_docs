@@ -23,7 +23,7 @@
 | 6 | representative_first_name_kana | 代表者名カナ | VARCHAR(100) |  | ○ |  | 全角カナ。 |  |
 | 7 | email | 代表メール | VARCHAR(100) |  | ○ |  | 代表問い合わせ窓口。ユニーク制約なし。 | 必要なら別途制約検討 |
 | 8 | employee_count | 従業員数 | INT |  | ○ |  | 最新の従業員数。 |  |
-| 9 | postal_code | 郵便番号 | CHAR(7) |  | ○ |  | ハイフン無し7桁。 |  |
+| 9 | postal_code | 郵便番号 | VARCHAR(7) |  | ○ |  | ハイフン無し7桁。 |  |
 |10 | prefecture_id | 都道府県ID | BIGINT UNSIGNED |  | ○ |  | `prefectures.id`参照。 |  |
 |11 | city | 市区町村 | VARCHAR(100) |  | ○ |  | 市区町村名。 |  |
 |12 | address_line_1 | 市区町村以降 | VARCHAR(100) |  | ○ |  | 以降の住所。 |  |
